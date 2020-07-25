@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="icon.png">
+    <title>Background Generator</title>
+</head>
+<body id="gradient">
+    <style>
+    body{
+        font-family: 'Times New Roman', Times, serif;
+        color: black;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.5em;
+        top: 10%;
+        background: linear-gradient(to right,green,yellow);
+    }
+    h3{
+        font-family: fantasy;
+    }
+    </style>
+    <h1>Background Color Generator</h1>
+    <h3>Made by Me</h3>
+    <input type="color" class="color1" value="#8C2CBE">
+    <input type="color" class="color2" value="#E00BD8">
+    <h2>Click the tabs to change the color</h2>
+    <h3></h3>
+    <script>
+        var color1 = document.querySelector(".color1");
+        var color2 = document.querySelector(".color2 ");
+        var body = document.getElementById("gradient");
+        function Gradient(){
+            body.style.background = "linear-gradient(to right," + color1.value + "," + color2.value + ")";
+        }
+        color1.addEventListener("input",Gradient);
+        color2.addEventListener("input",Gradient);
+    </script>
+</body>
+</html>
